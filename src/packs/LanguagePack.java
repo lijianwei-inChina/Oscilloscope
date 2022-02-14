@@ -102,14 +102,14 @@ public class LanguagePack {
 	 * @param LanguageConfigFile 语言设置文件
 	 */
 	private static void LoadSavedLanguages(String LanguageConfigFile) {
-		//TODO
+		//TODO 载入所有用户的语言
 	}
 	/**
 	 * 保存用户载入的语言文件
 	 * @param LanguageConfigFile 语言设置文件
 	 */
 	private static void SaveChoosedLanguage(String LanguageConfigFile, File languageFile) {
-		//TODO
+		//TODO 保存用户载入的语言文件
 	}
 	
 	/**

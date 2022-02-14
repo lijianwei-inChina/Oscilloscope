@@ -6,6 +6,23 @@ package bean;
  * @version 创建时间: 2022年1月22日 下午7:51:54
  */
 public class Electron {
+
+	private EPosition position; // 用三维坐标系该电子的位置
+	private ESpeed SpeedPerSecond = new ESpeed(0.0, 0.0 ,0.0); // 电子的速度(m/s)
+	public final static Double QuantityOfElectricity = -1.602176634E-19; // 电子电荷量（常量）
+	
+	public Electron() {
+		
+	}
+	/**
+	 * @param position 电子所处位置
+	 * @param speedPerSecond 电子速度
+	 */
+	public Electron(EPosition position, ESpeed speedPerSecond) {
+		super();
+		this.position = position;
+		SpeedPerSecond = speedPerSecond;
+	}
 	/**
 	 * @return the position
 	 */
@@ -30,21 +47,13 @@ public class Electron {
 	public void setSpeedPerSecond(ESpeed speedPerSecond) {
 		SpeedPerSecond = speedPerSecond;
 	}
-	/**
-	 * @return the quantityOfElectricity
-	 */
-	public Double getQuantityOfElectricity() {
-		return QuantityOfElectricity;
-	}
-	private EPosition position; // 用三维坐标系该电子的位置
-	private ESpeed SpeedPerSecond = new ESpeed(0.0, 0.0 ,0.0); // 电子的速度(m/s)
-	private final Double QuantityOfElectricity = -1.602176634E-19; // 电子电荷量（常量）
 	
 	/**
 	 * 根据所处位置更新自己的状态
 	 * @param deltaT 刷新的极小时间deltaT
+	 * @param f 当前所处位置电子所受力
 	 */
-	public void UpdateMyself(Double deltaT) {
-		//TODO
+	public void UpdateMyself(Double deltaT, Force f) {
+		//TODO Update myself in a very short period of time with force 'f'
 	}
 }
