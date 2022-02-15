@@ -6,6 +6,13 @@ package bean;
 public class Force extends Phasor {
 
 	/**
+	 * 用已知力进行初始化
+	 * @param f 已知的力
+	 */
+	public Force(Phasor f) {
+		super(f);
+	}
+	/**
 	 * 创建一个力=0N
 	 */
 	public Force() {

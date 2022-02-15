@@ -9,7 +9,8 @@ public class Electron {
 
 	private EPosition position; // 用三维坐标系该电子的位置
 	private ESpeed SpeedPerSecond = new ESpeed(0.0, 0.0 ,0.0); // 电子的速度(m/s)
-	public final static Double QuantityOfElectricity = -1.602176634E-19; // 电子电荷量（常量）
+	public final static Double QuantityOfElectricity = -1.602176634E-19; // 电子电荷量(C)（常量）
+	public final static Double MassOfElectricity = 9.10938215E-31; // 电子质量(kg)
 	
 	public Electron() {
 		
@@ -50,10 +51,13 @@ public class Electron {
 	
 	/**
 	 * 根据所处位置更新自己的状态
-	 * @param deltaT 刷新的极小时间deltaT
+	 * @param deltaT 刷新的极小时间{@code deltaT}
 	 * @param f 当前所处位置电子所受力
 	 */
 	public void UpdateMyself(Double deltaT, Force f) {
-		//TODO Update myself in a very short period of time with force 'f'
+		Acceleration a = new Acceleration(f.NumMultiply(1d / MassOfElectricity)); // 计算加速度a=F/m=f*(1/m)
+		ESpeed v0 = this.SpeedPerSecond; // 获取初速度v0
+		this.SpeedPerSecond = (ESpeed) this.SpeedPerSecond.Add(a.NumMultiply(deltaT)); // 更新电子的末速度δv=a*δt
+		this.position = (EPosition) this.position.Add(v0.Add(this.SpeedPerSecond).NumMultiply(deltaT / 2d)); // 更新电子的位置δx=(v0+v)/2*δt
 	}
 }

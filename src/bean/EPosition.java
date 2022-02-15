@@ -1,57 +1,30 @@
 package bean;
 /**
+ * <p>位置矢量，表示在示波器内的坐标原点到该点的位置</p>
  * @author 李坚蔚
  * @version 创建时间: 2022年2月6日 下午1:49:15
  */
-public class EPosition {
+public class EPosition extends Phasor {
+	/**
+	 * 默认构造函数，初始化为(0,0,0)
+	 */
 	public EPosition() {
-		this.set(0.0, 0.0, 0.0);
+		super(0d, 0d ,0d);
 	}
+	/**
+	 * 根据(x,y,z)构造位置矢量
+	 * @param x
+	 * @param y
+	 * @param z
+	 */
 	public EPosition(Double x, Double y, Double z) {
-		this.set(x, y, z);
-	}
-	private Double x = 0.0;
-	private Double y = 0.0;
-	private Double z = 0.0;
-	/**
-	 * @return the x
-	 */
-	public Double getX() {
-		return x;
+		super(x, y, z);
 	}
 	/**
-	 * @param x the x to set
+	 * 用已知位置矢量进行初始化
+	 * @param p 已知的位置矢量
 	 */
-	public void setX(Double x) {
-		this.x = x;
-	}
-	/**
-	 * @return the y
-	 */
-	public Double getY() {
-		return y;
-	}
-	/**
-	 * @param y the y to set
-	 */
-	public void setY(Double y) {
-		this.y = y;
-	}
-	/**
-	 * @return the z
-	 */
-	public Double getZ() {
-		return z;
-	}
-	/**
-	 * @param z the z to set
-	 */
-	public void setZ(Double z) {
-		this.z = z;
-	}
-	public void set(Double x, Double y, Double z) {
-		this.setX(x);
-		this.setY(y);
-		this.setZ(z);
+	public EPosition(Phasor p) {
+		super(p);
 	}
 }
