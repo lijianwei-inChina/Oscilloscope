@@ -7,9 +7,6 @@ package bean;
  * @version 创建时间: 2022年1月22日 下午7:54:11
  */
 public class Plate {
-	private static Integer totalPlateNum = 0; 
-	
-	private final Integer plateID; // 极板编号
 	
 	private Double posZ; // 储存极板所在的位置（从电子发射处开始为坐标原点，沿电子路径为正方向）
 	private Integer mode; // 标志极板是横向的还是纵向的
@@ -48,7 +45,6 @@ public class Plate {
 	 * @param _pos 极板的头部起始位置（从电子发射处开始为坐标原点，沿电子路径为正方向）
 	 */
 	public Plate(Integer _mode, Double _voltage, Double _length, Double _pos) {
-		plateID = ++totalPlateNum;
 		this.mode = _mode;
 		this.voltage = _voltage;
 		this.length = _length;
@@ -109,13 +105,6 @@ public class Plate {
 	public void setLength(Double length) {
 		this.length = length;
 	}
-
-	/**
-	 * @return the plateID
-	 */
-	public Integer getPlateID() {
-		return plateID;
-	}
 	
 	/**
 	 * 获取电子所受力
@@ -124,9 +113,9 @@ public class Plate {
 	 * @return 一个力，表示该电子的受力
 	 * @throws Exception 当PlateMode设置错误时抛出
 	 */
-	public Force getIntensity(Electron _e, Double _distance) throws Exception {
+	public Force getForce(Electron _e, Double _distance) throws Exception {
 		if(_e.getPosition().getZ() > (this.posZ + this.length) || _e.getPosition().getZ() < this.posZ) {
-			return new Force();
+			return new Force(0d, 0d, 0d);
 		} else {
 			if(this.mode == MODE_WIDTHWAYS) {
 				return new Force(this.voltage / _distance * Electron.QuantityOfElectricity, 0d, 0d); // F=Eq=(U/d)*q，在x轴方向（横向），并且正负号已经定下来了

@@ -116,8 +116,38 @@ public class Phasor {
 		return (this.x * p.getX() + this.y * p.getY() + this.z * p.getZ());
 	}
 	
+	/**
+	 * 矢量的加法
+	 * <pre>
+	 * public Phasor Add(Phasor p) {
+	 * 	return new Phasor(this.x + p.getX(), this.y + p.getY(), this.z + p.getZ());
+	 * }
+	 * </pre>
+	 * @param p 要加的向量
+	 * @return 所求的和
+	 */
 	public Phasor Add(Phasor p) {
 		return new Phasor(this.x + p.getX(), this.y + p.getY(), this.z + p.getZ());
+	}
+	
+	/**
+	 * 矢量的加法，返回值为自己，并且自己作为求和结果
+	 * <pre>
+	 * public Phasor NoReturnAdd(Phasor p) {
+	 * 	this.x += p.getX();
+	 * 	this.y += p.getY();
+	 * 	this.z += p.getZ();
+	 * 	return this;
+	 * }
+	 * </pre>
+	 * @param p 要加的矢量
+	 * @return 自己
+	 */
+	public Phasor NoReturnAdd(Phasor p) {
+		this.x += p.getX();
+		this.y += p.getY();
+		this.z += p.getZ();
+		return this;
 	}
 	
 	//TODO 补充更多的运算法则
