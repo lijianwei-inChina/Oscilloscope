@@ -19,14 +19,12 @@ public class Data {
 	private Boundary _boundary;
 	private List<Electron> _elections;
 	private List<Plate> _plates;
-	private Double _deltaT;
 	private ESpeed _electronInitSpeed;
 
 	public Data() {
 		this._boundary = new Boundary();
 		this._elections = new ArrayList<Electron>();
 		this._plates = new ArrayList<Plate>();
-		this._deltaT = 0d;
 		this._electronInitSpeed = new ESpeed(0d, 0d, 0d);
 	}
 	
@@ -119,20 +117,6 @@ public class Data {
 	 */
 	public void set_plates(List<Plate> _plates) {
 		this._plates = _plates;
-	}
-
-	/**
-	 * @return the _deltaT
-	 */
-	public Double get_deltaT() {
-		return _deltaT;
-	}
-
-	/**
-	 * @param _deltaT the _deltaT to set
-	 */
-	public void set_deltaT(Double _deltaT) {
-		this._deltaT = _deltaT;
 	}
 
 	/**

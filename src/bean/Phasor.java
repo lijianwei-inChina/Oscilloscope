@@ -150,5 +150,4 @@ public class Phasor {
 		return this;
 	}
 	
-	//TODO 补充更多的运算法则
 }
