@@ -28,8 +28,8 @@ public class LanguagePack {
 
 	private static Map<String, Map<String, String>> languageMaps = new HashMap<String, Map<String, String>>();
 	private static String CurrentLanguage = new String();
-	private final static String LanguageConfigFile = new String(".//languageSettings//chosen_language.ini");
-	private final static String LanguagePackFolder = new String(".//languageSettings//languagePacks//");
+	private final static String LanguageConfigFile = new String("." + File.separator + "languageSettings" + File.separator + "chosen_language.ini");
+	private final static String LanguagePackFolder = new String("." + File.separator + "languageSettings" + File.separator + "languagePacks" + File.separator);
 	private final static String originLanguageName = "原生语言(简体中文)";
 
 	/**
@@ -47,6 +47,10 @@ public class LanguagePack {
 		mp.put("ControlWindow.Start", "开始");
 		mp.put("ControlWindow.Stop", "停止");
 		mp.put("ControlWindow.Exit", "退出");
+		mp.put("ControlWindow.Help.text", "帮助你了解软件的使用方法。");
+		mp.put("ControlWindow.Start.text", "开始进行数据的采集和呈递。");
+		mp.put("ControlWindow.Stop.text", "停止数据采集和呈递。");
+		mp.put("ControlWindow.Exit.text", "退出本软件。");
 		// ControlWindow.java End
 
 		languageMaps.put(originLanguageName, mp);
@@ -253,7 +257,7 @@ public class LanguagePack {
 	}
 
 	/**
-	 * 生成默认翻译文件，便于翻译
+	 * 生成默认翻译数据文件，便于翻译
 	 * 
 	 * @param f 文件位置
 	 * @throws IOException 保存文件时抛出错误

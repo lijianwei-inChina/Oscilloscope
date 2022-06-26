@@ -21,9 +21,9 @@ public class Force extends Phasor {
 
 	/**
 	 * 用三维矢量表示一个力
-	 * @param x
-	 * @param y
-	 * @param z
+	 * @param x 力矢量的x坐标
+	 * @param y 力矢量的y坐标
+	 * @param z 力矢量的z坐标
 	 */
 	public Force(Double x, Double y, Double z) {
 		super(x, y, z);

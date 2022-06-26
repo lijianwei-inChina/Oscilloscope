@@ -1,9 +1,0 @@
-[name]
-name = 原生语言(简体中文)
-
-[translation]
-ControlWindow.Exit = 退出
-ControlWindow.Help = 帮助
-ControlWindow.Start = 开始
-ControlWindow.Stop = 停止
-

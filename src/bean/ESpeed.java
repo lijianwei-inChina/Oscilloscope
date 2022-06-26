@@ -20,9 +20,9 @@ public class ESpeed extends Phasor {
 	}
 	/**
 	 * 用三维矢量表示一个速度
-	 * @param x
-	 * @param y
-	 * @param z
+	 * @param x 速度矢量的x方向
+	 * @param y 速度矢量的y方向
+	 * @param z 速度矢量的z方向
 	 */
 	public ESpeed(double x, double y, double z) {
 		super(x, y, z);

@@ -13,9 +13,9 @@ public class EPosition extends Phasor {
 	}
 	/**
 	 * 根据(x,y,z)构造位置矢量
-	 * @param x
-	 * @param y
-	 * @param z
+	 * @param x 坐标x
+	 * @param y 坐标y
+	 * @param z 坐标z
 	 */
 	public EPosition(Double x, Double y, Double z) {
 		super(x, y, z);

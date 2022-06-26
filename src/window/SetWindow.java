@@ -36,6 +36,7 @@ public class SetWindow extends JFrame {
 	private JTextField textField_3;
 
 	/**
+	 * @param args main方法的args
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
@@ -71,6 +72,7 @@ public class SetWindow extends JFrame {
 		panel.setLayout(new GridLayout(0, 2, 10, 10));
 		
 		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setFont(new Font("宋体", Font.PLAIN, 20));
 		panel.add(lblNewLabel);
 		
 		textField = new JTextField();
@@ -82,6 +84,7 @@ public class SetWindow extends JFrame {
 		panel_1.setLayout(new GridLayout(0, 2, 10, 10));
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
+		lblNewLabel_1.setFont(new Font("宋体", Font.PLAIN, 20));
 		panel_1.add(lblNewLabel_1);
 		
 		textField_1 = new JTextField();
@@ -93,6 +96,7 @@ public class SetWindow extends JFrame {
 		panel_2.setLayout(new GridLayout(0, 2, 10, 10));
 		
 		JLabel lblNewLabel_2 = new JLabel("New label");
+		lblNewLabel_2.setFont(new Font("宋体", Font.PLAIN, 20));
 		panel_2.add(lblNewLabel_2);
 		
 		textField_2 = new JTextField();
@@ -104,6 +108,7 @@ public class SetWindow extends JFrame {
 		panel_3.setLayout(new GridLayout(0, 2, 10, 10));
 		
 		JLabel lblNewLabel_3 = new JLabel("New label");
+		lblNewLabel_3.setFont(new Font("宋体", Font.PLAIN, 20));
 		panel_3.add(lblNewLabel_3);
 		
 		textField_3 = new JTextField();
@@ -115,9 +120,11 @@ public class SetWindow extends JFrame {
 		panelButtons.setLayout(new GridLayout(0, 2, 10, 10));
 		
 		JButton btnConfirm = new JButton("Confirm");
+		btnConfirm.setFont(new Font("宋体", Font.PLAIN, 20));
 		panelButtons.add(btnConfirm);
 		
 		JButton btnCancel = new JButton("Cancel");
+		btnCancel.setFont(new Font("宋体", Font.PLAIN, 20));
 		panelButtons.add(btnCancel);
 	}
 

@@ -28,6 +28,7 @@ public class ControlWindow extends JFrame {
 	private JPanel contentPane;
 
 	/**
+	 * @param args main方法的args
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
@@ -62,7 +63,7 @@ public class ControlWindow extends JFrame {
 		ControlPanel.add(verticalGlue_3);
 		
 		JButton btnHelp = new JButton(LanguagePack.GetTranslation("ControlWindow.Help"));
-		btnHelp.setToolTipText("Help you to know the basic usages of this program.");
+		btnHelp.setToolTipText(LanguagePack.GetTranslation("ControlWindow.Help.text"));
 		btnHelp.setFont(new Font("宋体", Font.PLAIN, 20));
 		ControlPanel.add(btnHelp);
 		
@@ -70,7 +71,7 @@ public class ControlWindow extends JFrame {
 		ControlPanel.add(verticalGlue);
 		
 		JButton btnStart = new JButton(LanguagePack.GetTranslation("ControlWindow.Start"));
-		btnStart.setToolTipText("Start Graph Collecting.");
+		btnStart.setToolTipText(LanguagePack.GetTranslation("ControlWindow.Start.text"));
 		btnStart.setFont(new Font("宋体", Font.PLAIN, 20));
 		ControlPanel.add(btnStart);
 		
@@ -78,7 +79,7 @@ public class ControlWindow extends JFrame {
 		ControlPanel.add(verticalGlue_1);
 		
 		JButton btnEnd = new JButton(LanguagePack.GetTranslation("ControlWindow.Stop"));
-		btnEnd.setToolTipText("Stop Graph Collecting.");
+		btnEnd.setToolTipText(LanguagePack.GetTranslation("ControlWindow.Stop.text"));
 		btnEnd.setFont(new Font("宋体", Font.PLAIN, 20));
 		ControlPanel.add(btnEnd);
 		

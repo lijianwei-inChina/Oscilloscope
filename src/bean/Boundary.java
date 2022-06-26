@@ -68,7 +68,7 @@ public class Boundary {
 	}
 	/**
 	 * 判断电子是否在示波器空间之外
-	 * @param p
+	 * @param p 电子的位置(EPosition)
 	 * @return Boolean, true即为在示波器之外, false在示波器之内
 	 */
 	public Boolean isOutOfBoundary(EPosition p) {

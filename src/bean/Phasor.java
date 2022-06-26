@@ -73,10 +73,9 @@ public class Phasor {
 
 	/**
 	 * 用三维的数对表示矢量
-	 * 
-	 * @param x
-	 * @param y
-	 * @param z
+	 * @param x 矢量的x
+	 * @param y 矢量的y
+	 * @param z 矢量的z
 	 */
 	public void set(Double x, Double y, Double z) {
 		this.setX(x);

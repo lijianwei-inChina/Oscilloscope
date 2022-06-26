@@ -32,7 +32,9 @@ public class Electron {
 		return position;
 	}
 	/**
-	 * @param position the position to set
+	 * @param x ×ø±êx
+	 * @param y ×ø±êy
+	 * @param z ×ø±êz
 	 */
 	public void setPosition(Double x, Double y, Double z) {
 		this.position.set(x,y,z);

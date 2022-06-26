@@ -12,7 +12,7 @@ import packs.LanguagePack;
 public class LanguagePack_Test {
 	public static void main(String[] args) {
 		try {
-			LanguagePack.OutputDefaultLanguageFile(new File(".//原生语言包//原生语言包(UTF-8.lgp"));
+			LanguagePack.OutputDefaultLanguageFile(new File(".//原生语言包//原生语言包(UTF-8).lgp"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

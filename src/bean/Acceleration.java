@@ -21,9 +21,9 @@ public class Acceleration extends Phasor {
 
 	/**
 	 * 用三维矢量表示一个加速度
-	 * @param x
-	 * @param y
-	 * @param z
+	 * @param x 加速度矢量的x方向
+	 * @param y 加速度矢量的y方向
+	 * @param z 加速度矢量的z方向
 	 */
 	public Acceleration(Double x, Double y, Double z) {
 		super(x, y, z);
